@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Company - Practice Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #0044cc; color: white; padding: 20px; text-align: center; }
+        nav a { margin: 10px; color: white; text-decoration: none; font-weight: bold; }
+        section { padding: 20px; }
+        footer { background-color: #222; color: white; text-align: center; padding: 10px; }
+        input, select, button { margin: 5px; padding: 5px; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Company</h1>
+    <nav>
+        <a href="#" id="homeLink">Home</a>
+        <a href="#" id="aboutLink">About</a>
+        <a href="https://www.google.com" target="_blank" id="googleLink">Google</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Sign Up Form</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="submitBtn">Submit</button>
+    <p id="formMessage"></p>
+</section>
+
+<section>
+    <h2>Select Your Options</h2>
+    <select id="countrySelect">
+        <option value="">Select Country</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select>
+    <button id="showAlert">Show Alert</button>
+</section>
+
+<section>
+    <h2>Company Data Table</h2>
+    <table id="dataTable">
+        <tr><th>ID</th><th>Name</th><th>Role</th></tr>
+        <tr><td>1</td><td>Ajay</td><td>Tester</td></tr>
+        <tr><td>2</td><td>Priya</td><td>Developer</td></tr>
+    </table>
+</section>
+
+<section>
+    <h2>Embedded Frame</h2>
+    <iframe src="https://www.example.com" width="400" height="200" id="sampleFrame"></iframe>
+</section>
+
+<footer>
+    <p>Follow us on: 
+        <a href="#" id="fbLink">Facebook</a> | 
+        <a href="#" id="twitterLink">Twitter</a>
+    </p>
+</footer>
+
+<script>
+    document.getElementById("submitBtn").onclick = function() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        document.getElementById("formMessage").innerText = "Hello " + name + "! Your email " + email + " is registered.";
+    };
+
+    document.getElementById("showAlert").onclick = function() {
+        alert("This is an alert popup!");
+    };
+</script>
+
+</body>
+</html>
